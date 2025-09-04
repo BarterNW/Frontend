@@ -1,12 +1,14 @@
-import Image from "next/image";
 
+import TestimonialSection from '../components/testimonialSection'
+import BarterNowSection from '../components/BarterNowSection'
+import WhyBarterNow from '../components/WhyBarterNow';
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className=' flex flex-col justify-center iteams-center overflow-x-hidden'>
+      <WhyBarterNow />
+      <TestimonialSection />
+      <BarterNowSection />
       
-      <h1 className="text-4xl  text-primary  font-bold">Welcome To Barter Now</h1>
-      </main>
     </div>
   );
 }

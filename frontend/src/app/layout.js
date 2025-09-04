@@ -1,12 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import "@fontsource/plus-jakarta-sans"; // Defaults to weight 400
+// Or specify weight/style:
+import "@fontsource/plus-jakarta-sans/700.css";
+import "@fontsource/plus-jakarta-sans/400-italic.css";
 
-const plusJakarta = Plus_Jakarta_Sans({  //Figma Design Font
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // choose the weights you need
-  variable: "--font-plus-jakarta",      // custom CSS variable
-});
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${plusJakarta.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
