@@ -10,7 +10,7 @@ export default function Header() {
   ];
 
   return (
-    <div className="flex items-center justify-between border rounded-full px-6 py-2 shadow-sm bg-white max-w-8/12 mx-auto mt-4">
+    <div className="flex mx-auto items-center justify-between border rounded-full px-6 py-2 shadow-sm bg-white w-fit my-4">
       <div className="flex items-center space-x-2">
        
         <Image src={logo} alt="Logo" width={50} height={50} />
@@ -18,7 +18,7 @@ export default function Header() {
       </div>
 
     
-      <div className="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
+      <div className="hidden md:flex space-x-6 text-sm font-medium text-gray-700 mx-4 ">
         {navLinks.map((link, index) => (
           <a 
             key={index} 
@@ -33,7 +33,7 @@ export default function Header() {
    
       <a
         href="#organisers"
-        className="bg-[#0C2146] text-white px-5 py-2 rounded-full font-medium hover:bg-[#122e63] flex items-center space-x-1"
+        className="hidden md:block bg-[#0C2146] text-white px-5 py-2 rounded-full font-medium hover:bg-[#122e63] flex items-center space-x-1"
       >
         <span>Event Organisers</span>
         <span>→</span>
