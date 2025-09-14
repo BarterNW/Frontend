@@ -4,11 +4,19 @@ import BarterNowSection from '../components/BarterNowSection'
 import WhyBarterNow from '../components/WhyBarterNow';
 import InviteBanner from "@/components/layout/InviteBar";
 import FeaturesSection from "@/components/section/FeatureSection";
+import TrustedTeams from "@/components/TrustedTeams"
+
 export default function Home() {
   return (
     
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start w-full">
-        
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start md:items-center w-full justify-center
+      ">
+        <TestimonialSection/>
+        <BarterNowSection/>
+        <WhyBarterNow/>
+        <InviteBanner/>
+        <FeaturesSection/>
+       <TrustedTeams/>
       </main>
     
   );
