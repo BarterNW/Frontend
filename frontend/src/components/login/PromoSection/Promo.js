@@ -4,7 +4,7 @@ import EndText from "./EndText";
 
 export default function Promo() {
   return (
-    <div className=" hidden md:block w-[47.5%] h-[42.5rem] flex flex-col items-center bg-[#061C47] px-6 text-center ">
+    <div className=" hidden md:block w-[47.5%] h-[41.5rem] flex flex-col items-center bg-[#061C47] px-6 text-center ">
       <Logo/>
       <Card
         img="/card/zeroCom.png"

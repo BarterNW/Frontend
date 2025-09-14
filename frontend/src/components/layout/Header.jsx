@@ -10,11 +10,11 @@ export default function Header() {
   ];
 
   return (
-    <div className="flex mx-auto items-center justify-between border rounded-full px-6 py-2 shadow-sm bg-white w-fit my-4">
+    <div className="flex mx-auto items-center justify-between border-1 border-black rounded-full px-6 py-2 shadow-sm bg-white w-fit my-4 ">
       <div className="flex items-center space-x-2">
        
         <Image src={logo} alt="Logo" width={50} height={50} />
-        <span className="font-semibold text-lg">BarterNow</span>
+        <span className="font-semibold tect-black text-lg">BarterNow</span>
       </div>
 
     

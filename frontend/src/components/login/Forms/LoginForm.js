@@ -7,7 +7,7 @@ import Footer from "./Footer";
 
 export default function LoginForm() {
     return (
-      <div className="w-full h-screen md:w-[47.5%] md:h-[42.5rem] flex flex-col justify-center items-center pt-10  md:my-auto">
+      <div className="w-full h-screen md:w-[47.5%] md:h-full flex flex-col justify-center items-center py-6  md:my-auto bg-transparent">
         <Header head="Log In to Barter Now" cont="Deals That Power Events"/>
         <SocialLogin/>
         <Divider/>
