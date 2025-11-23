@@ -1,4 +1,5 @@
 import React from 'react';
+import { ScrollReveal } from '@/components/common/ScrollReveal';
 // Use public asset paths instead of importing files
 const aiMatchingImg = '/assets/ai-matching.png';
 const zeroCommissionImg = '/assets/zero-commission.png';
@@ -63,51 +64,57 @@ const Features: React.FC = () => {
       
       {/* First row - 2 cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
-        <div className="bg-white border border-gray-300 rounded-xl p-8 shadow-sm hover-card transition-smooth hover-img-zoom overflow-hidden">
-          <img 
-            src={aiMatchingImg} 
-            alt="AI Matching visualization" 
-            className="h-72 w-full rounded-lg mb-5 object-cover"
-          />
-          <h3 className="text-xl font-bold text-foreground mb-3">
-            AI Matching
-          </h3>
-          <p className="text-base text-muted-foreground leading-relaxed">
-            Lore Instantly connect sponsors with the most relevant events using intelligent algo.
-          </p>
-        </div>
+        <ScrollReveal animation="blur-fade" delay={100} threshold={0.2}>
+          <div className="bg-white border border-gray-300 rounded-xl p-8 shadow-sm hover-card transition-smooth hover-img-zoom overflow-hidden">
+            <img 
+              src={aiMatchingImg} 
+              alt="AI Matching visualization" 
+              className="h-72 w-full rounded-lg mb-5 object-cover"
+            />
+            <h3 className="text-xl font-bold text-foreground mb-3">
+              AI Matching
+            </h3>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              Lore Instantly connect sponsors with the most relevant events using intelligent algo.
+            </p>
+          </div>
+        </ScrollReveal>
 
-        <div className="bg-white border border-gray-300 rounded-xl p-8 shadow-sm hover-card transition-smooth hover-img-zoom overflow-hidden">
-          <img 
-            src={zeroCommissionImg} 
-            alt="Zero Commissions" 
-            className="h-72 w-full rounded-lg mb-5 object-cover"
-          />
-          <h3 className="text-xl font-bold text-foreground mb-3">
-            Zero Commissions
-          </h3>
-          <p className="text-base text-muted-foreground leading-relaxed">
-            Lore Instantly connect sponsors with the most relevant events using intelligent algo.
-          </p>
-        </div>
+        <ScrollReveal animation="blur-fade" delay={200} threshold={0.2}>
+          <div className="bg-white border border-gray-300 rounded-xl p-8 shadow-sm hover-card transition-smooth hover-img-zoom overflow-hidden">
+            <img 
+              src={zeroCommissionImg} 
+              alt="Zero Commissions" 
+              className="h-72 w-full rounded-lg mb-5 object-cover"
+            />
+            <h3 className="text-xl font-bold text-foreground mb-3">
+              Zero Commissions
+            </h3>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              Lore Instantly connect sponsors with the most relevant events using intelligent algo.
+            </p>
+          </div>
+        </ScrollReveal>
       </div>
 
       {/* Second row - 3 cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {[verifiedEvents1Img, verifiedEvents2Img, verifiedEvents3Img].map((img, index) => (
-          <div key={index} className="bg-white border border-gray-300 rounded-xl p-6 shadow-sm hover-card transition-smooth hover-img-zoom overflow-hidden">
-            <img 
-              src={img} 
-              alt={`Verified Events ${index + 1}`} 
-              className="h-60 w-full rounded-lg mb-4 object-cover"
-            />
-            <h3 className="text-lg font-bold text-foreground mb-3">
-              Verified Events
-            </h3>
-            <p className="text-base text-muted-foreground leading-relaxed">
-              Work only with authenticated organizers and sponsors to ensure trust and Transparency
-            </p>
-          </div>
+          <ScrollReveal key={index} animation="zoom" delay={(index + 3) * 100} threshold={0.2}>
+            <div className="bg-white border border-gray-300 rounded-xl p-6 shadow-sm hover-card transition-smooth hover-img-zoom overflow-hidden">
+              <img 
+                src={img} 
+                alt={`Verified Events ${index + 1}`} 
+                className="h-60 w-full rounded-lg mb-4 object-cover"
+              />
+              <h3 className="text-lg font-bold text-foreground mb-3">
+                Verified Events
+              </h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Work only with authenticated organizers and sponsors to ensure trust and Transparency
+              </p>
+            </div>
+          </ScrollReveal>
         ))}
       </div>
     </section>

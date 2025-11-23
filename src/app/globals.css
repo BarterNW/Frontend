@@ -69,6 +69,11 @@
   * {
     border-color: hsl(var(--border));
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
@@ -191,4 +196,212 @@
   .transition-slow {
     @apply transition-all duration-500 ease-in-out;
   }
+  
+  /* Scroll Animations */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fade-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoom-in {
+    from {
+      opacity: 0;
+      transform: scale(0.8) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  @keyframes flip-in {
+    from {
+      opacity: 0;
+      transform: perspective(600px) rotateX(-15deg);
+    }
+    to {
+      opacity: 1;
+      transform: perspective(600px) rotateX(0);
+    }
+  }
+  
+  @keyframes blur-fade-in {
+    from {
+      opacity: 0;
+      filter: blur(10px);
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes rotate-fade-in {
+    from {
+      opacity: 0;
+      transform: rotate(-5deg) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(0) scale(1);
+    }
+  }
+  
+  @keyframes slide-rotate-in {
+    from {
+      opacity: 0;
+      transform: translateY(40px) rotate(-3deg);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) rotate(0);
+    }
+  }
+  
+  /* Professional scroll animation classes with smooth easing */
+  .scroll-fade-in-up {
+    opacity: 0;
+    animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .scroll-fade-in-down {
+    opacity: 0;
+    animation: fade-in-down 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .scroll-fade-in-left {
+    opacity: 0;
+    animation: fade-in-left 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .scroll-fade-in-right {
+    opacity: 0;
+    animation: fade-in-right 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .scroll-scale-in {
+    opacity: 0;
+    animation: scale-in 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+  
+  .scroll-slide-in {
+    opacity: 0;
+    animation: slide-in 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .scroll-zoom-in {
+    opacity: 0;
+    animation: zoom-in 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+  
+  .scroll-flip-in {
+    opacity: 0;
+    animation: flip-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .scroll-blur-fade-in {
+    opacity: 0;
+    animation: blur-fade-in 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .scroll-rotate-fade-in {
+    opacity: 0;
+    animation: rotate-fade-in 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+  
+  .scroll-slide-rotate-in {
+    opacity: 0;
+    animation: slide-rotate-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  /* Stagger animations with progressive delays */
+  .scroll-delay-100 { animation-delay: 0.1s; }
+  .scroll-delay-200 { animation-delay: 0.2s; }
+  .scroll-delay-300 { animation-delay: 0.3s; }
+  .scroll-delay-400 { animation-delay: 0.4s; }
+  .scroll-delay-500 { animation-delay: 0.5s; }
+  .scroll-delay-600 { animation-delay: 0.6s; }
+  .scroll-delay-700 { animation-delay: 0.7s; }
+  .scroll-delay-800 { animation-delay: 0.8s; }
+  .scroll-delay-900 { animation-delay: 0.9s; }
+  .scroll-delay-1000 { animation-delay: 1s; }
+  
+  /* Parallax effect */
+  .scroll-parallax {
+    will-change: transform;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  /* Smooth reveal with gradient */
+  .scroll-gradient-reveal {
+    opacity: 0;
+    background: linear-gradient(135deg, transparent 0%, currentColor 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: fade-in-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
 }
+
