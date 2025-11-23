@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import AuthLayout from "@/components/layout/AuthLayout";
 
-export default function SignupPage() {
+function SignupForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialType = searchParams.get("type") || "organizer";
@@ -254,5 +254,17 @@ export default function SignupPage() {
         </div>
       </div>
     </AuthLayout>
+  );
+}
+
+export default function SignupPage() {
+  return (
+    <Suspense fallback={
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#061C47]"></div>
+      </div>
+    }>
+      <SignupForm />
+    </Suspense>
   );
 }
